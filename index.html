@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link rel="icon" type="image/webp" href="logo.webp">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hadi Architect & Builder | Best Architects &amp; Construction Company in Pakistan | House Design, Interior &amp; 3D Elevation</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #F5F5F5;
+            --text-muted: #b3b3b3;
+            --accent-gold: #D4AF37;
+            --accent-bronze: #CD7F32;
+            --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        /* --- HEADER & NAVBAR --- */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-gold);
+        }
+
+        .navbar {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: var(--text-color);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--accent-gold);
+            background-color: rgba(212, 175, 55, 0.1);
+        }
+
+        .menu-btn {
+            display: none;
+            color: var(--text-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        /* --- HERO SECTION & VIDEO --- */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 140px 0 60px 0;
+            overflow: hidden;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(18,18,18,0.5), rgba(18,18,18,0.8));
+            z-index: -1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+            color: var(--text-color);
+        }
+
+        /* --- NEW CALCULATE RATES BUTTON --- */
+        .calc-rates-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 2px solid var(--accent-gold);
+            padding: 12px 35px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            margin-bottom: 35px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .calc-rates-btn:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* --- ESTIMATION FORM TAB SYSTEM (FIXED GLASS LOOK) --- */
+        .form-section {
+            background: rgba(30, 30, 30, 0.45);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .form-title {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(245, 245, 245, 0.1);
+            padding-bottom: 15px;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: 2px solid transparent;
+            color: var(--text-color);
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+        }
+
+        .form-container {
+            display: none;
+        }
+
+        .form-container.active {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: left;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            background-color: rgba(18, 18, 18, 0.6);
+            border: 1px solid rgba(245, 245, 245, 0.2);
+            color: var(--text-color);
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            border-color: var(--accent-gold);
+            outline: none;
+            background-color: rgba(18, 18, 18, 0.85);
+        }
+
+        .submit-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: background 0.3s;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #20ba5a;
+        }
+
+        /* --- STATS COUNTER SECTION --- */
+        .stats-section {
+            background: #1e1e1e; 
+            padding: 50px 0; 
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+            border-top: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .stats-grid {
+            display: flex; 
+            justify-content: space-around; 
+            flex-wrap: wrap; 
+            text-align: center; 
+            gap: 30px;
+        }
+
+        .stat-item h2 {
+            color: var(--accent-gold); 
+            font-size: 2.8rem; 
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- FEATURES/SERVICES OVERVIEW --- */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .feature-card {
+            background-color: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-gold);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* --- ABOUT US SECTION --- */
+        .about-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img img, .choose-img img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .about-content h3 {
+            font-size: 1.3rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+        }
+
+        .btn-gold {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--accent-gold);
+            border: 1px solid var(--accent-gold);
+        }
+
+        /* --- WHY CHOOSE US SECTION --- */
+        .choose-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            align-items: center;
+        }
+
+        .choose-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .choose-box {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 6px;
+        }
+
+        .choose-box i {
+            font-size: 2rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .choose-box h4 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .choose-box p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* --- PROJECTS SECTION --- */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: scale(1.03);
+        }
+
+        .project-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+
+        .project-info p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .project-link {
+            color: var(--accent-gold);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.95rem;
+        }
+
+        /* --- TESTIMONIALS SECTION --- */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .review-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-gold);
+            position: relative;
+        }
+
+        .review-card i.quote {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: rgba(214, 175, 55, 0.1);
+        }
+
+        .stars {
+            color: #ffcc00;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .review-text {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .review-author {
+            font-weight: bold;
+            color: var(--text-color);
+        }
+
+        .review-desig {
+            font-size: 0.8rem;
+            color: var(--accent-gold);
+        }
+
+        /* --- STICKY FLOATING WHATSAPP BUTTON --- */
+        .floating-wa {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            z-index: 2000;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+        
+        .floating-wa:hover {
+            transform: scale(1.1);
+            background-color: #20ba5a;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: #0c0c0c;
+            padding: 70px 0 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 5px;
+        }
+
+        .footer-col h3 {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .footer-col p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: var(--accent-gold);
+            color: var(--primary-bg);
+            transform: translateY(-3px);
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .content-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .content-info-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .content-info-list i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+            width: 20px;
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* --- RESPONSIVE MEDIA QUERIES --- */
+        @media (max-width: 992px) {
+            .navbar {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                background-color: rgba(18, 18, 18, 0.98);
+                padding: 20px 5%;
+                gap: 10px;
+                border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+                transition: left 0.4s ease;
+                backdrop-filter: blur(15px);
+            }
+
+            .navbar.active {
+                left: 0;
+            }
+            
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .features-grid, .projects-grid, .reviews-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-wrapper, .choose-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .about-img, .choose-img {
+                order: -1;
+            }
+
+            .about-img img, .choose-img img {
+                height: 350px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 120px 0 40px 0;
+                height: auto;
+            }
+
+            .calc-rates-btn {
+                padding: 10px 25px;
+                font-size: 1rem;
+                margin-bottom: 25px;
+            }
+
+            .form-section {
+                padding: 20px 15px;
+            }
+
+            .form-container.active {
+                grid-template-columns: 1fr !important;
+                gap: 15px;
+            }
+
+            .full-width {
+                grid-column: span 1 !important;
+            }
+
+            .features-grid, .projects-grid, .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .choose-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stat-item h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+<meta content="Hadi Architect & Builder provides professional architectural design, house plans, 3D elevation, interior design, construction services, renovation, commercial projects, landscape design, and turnkey construction across Pakistan. Free consultation available." name="description"/><meta content="Architect Pakistan, House Design Pakistan, Interior Design Pakistan, Construction Company Pakistan, 3D Elevation, Pattoki Architect, Lahore Architect" name="keywords"/><meta content="index,follow,max-image-preview:large" name="robots"/><meta content="Hadi Architect & Builder | Best Architects &amp; Construction Company in Pakistan" property="og:title"/><meta content="Professional Architecture, Interior Design, Construction &amp; 3D Elevation Services Across Pakistan." property="og:description"/><meta content="website" property="og:type"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Hadi Architect & Builder","telephone":"+923245301575","email":"hadiarchitectbuilder@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Pattoki","addressRegion":"Punjab","addressCountry":"PK"}}</script></head>
+<body>
+<header>
+<div class="container nav-container">
+<a class="logo" href="index.html">
+<i class="fa-solid fa-compass-drafting"></i> Hadi Architect & Builder
+            </a>
+<ul class="navbar" id="mobileNavbar">
+<li><a class="nav-link active" href="index.html">Home</a></li>
+<li><a class="nav-link" href="about.html">About</a></li>
+<li><a class="nav-link" href="projects.html">Projects</a></li>
+<li><a class="nav-link" href="design-elevation.html">Design&amp;Elevation</a></li>
+<li><a class="nav-link" href="services.html">Services</a></li>
+<li><a class="nav-link" href="packages.html">Packages</a></li>
+<li><a class="nav-link" href="blogs.html">Blogs</a></li>
+<li><a class="nav-link" href="Contact.html">Contact</a></li>
+</ul>
+<div class="menu-btn" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
+</div>
+</header>
+<section class="hero">
+<video autoplay="" class="hero-video" loop="" muted="" playsinline="">
+<source src="hero-video.mp4" type="video/mp4"/>
+            Your browser does not support the video tag.
+        </video>
+<div class="hero-overlay"></div>
+<div class="container hero-content">
+<h1>Build Your Dream Luxury Space With Pakistan's Leading Experts</h1>
+<p>Modern Architectural Design &amp; Premium Construction Services Since 2022. Get a Quote Instantly!</p>
+<a class="calc-rates-btn" href="packages.html">
+<i class="fa-solid fa-calculator"></i> Calculate Your Rates
+            </a>
+            <p>Get Free Cost Estimation &amp; Design Consultation</p>
+    
+</div>
+</section>
+<section class="stats-section">
+<div class="container stats-grid">
+<div class="stat-item">
+<h2>1,360+</h2>
+<p>Projects Completed</p>
+</div>
+<div class="stat-item">
+<h2>5+ Yrs</h2>
+<p>Industry Experience</p>
+</div>
+<div class="stat-item">
+<h2>100%</h2>
+<p>Satisfied Clients</p>
+</div>
+</div>
+</section>
+<section>
+<div class="container features-grid">
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+<h3>Get in Touch</h3>
+<p>We provide modern architectural designs, beautiful interior designs, solid structural design, and computerized drawings under one roof for your project.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-trowel-bricks"></i></div>
+<h3>Renovation</h3>
+<p>Home Renovation or Remodelling is the process of renovating or making additions to one's home. Home improvement projects enhance utility.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon"><i class="fa-solid fa-couch"></i></div>
+<h3>Enjoy Home</h3>
+<p>After your home is perfectly completed by our expert team, you will be able to enjoy your life better in your dream luxury space.</p>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="container about-wrapper">
+<div class="about-img">
+<img alt="Modern Architecture Elevation" src="img001.webp"/>
+</div>
+<div class="about-content">
+<h3>About Us</h3>
+<h2>We Construct Buildings</h2>
+<p>Hadi Architect & Builder was established in Pattoki Punjab, Pakistan in 2022. The company grew organically and gained extensive experience in Pakistan. Currently giving services all over Pakistan, Hadi Architect & Builder has accumulated an impressive portfolio of projects that spans the breadth of building genres – from residential, commercial, leisure, retail and interior design.</p>
+<p>The years of experience and absolute commitment to quality enhance the reputation that Hadi Architect & Builder has as a premier contractor. Our separate construction and design departments allow us the flexibility of providing a complete turnkey service.</p>
+<a class="btn-gold" href="about.html">Read More</a>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">Why Choose Us</h2>
+<p class="section-subtitle">What We Have To Be Unique</p>
+<div class="choose-wrapper">
+<div class="choose-grid">
+<div class="choose-box">
+<i class="fa-solid fa-user-tie"></i>
+<h4>Professional Approach</h4>
+<p>Offering notable design and quality construction. We pride ourselves on developing the best possible design solutions.</p>
+</div>
+<div class="choose-box">
+<i class="fa-solid fa-bolt"></i>
+<h4>Quick Response</h4>
+<p>Just Post Your Address we will Come Shortly Within 3 Days At Actual Site.</p>
+</div>
+<div class="choose-box">
+<i class="fa-solid fa-award"></i>
+<h4>Satisfaction Guarantee</h4>
+<p>With its experienced staff of architects complemented by knowledgeable support staff, we are your single resource.</p>
+</div>
+<div class="choose-box">
+<i class="fa-solid fa-headset"></i>
+<h4>24/7 Support</h4>
+<p>We Are here for Your Help And Committed to best service Provide at any stage.</p>
+</div>
+</div>
+<div class="choose-img">
+<img alt="Luxury Architectural Project" src="img002.webp"/>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">Our Featured Projects</h2>
+<p class="section-subtitle">Explore our latest architectural marvels across Pakistan</p>
+<div class="projects-grid">
+<div class="project-card">
+<img alt="Project 1" class="project-img" src="img003.webp"/>
+<div class="project-info">
+<h3>Modern 1 Kanal Villa</h3>
+<p><i class="fa-solid fa-location-dot"></i> DHA, Lahore</p>
+<a class="project-link" href="projects.html">More Projects <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="project-card">
+<img alt="Project 2" class="project-img" src="img004.webp"/>
+<div class="project-info">
+<h3>Luxury Commercial Plaza</h3>
+<p><i class="fa-solid fa-location-dot"></i> Pattoki, Kasur</p>
+<a class="project-link" href="projects.html">More Projects <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="project-card">
+<img alt="Project 3" class="project-img" src="img005.webp"/>
+<div class="project-info">
+<h3>Elegant Corporate Office</h3>
+<p><i class="fa-solid fa-location-dot"></i> Blue Area, Islamabad</p>
+<a class="project-link" href="projects.html">More Projects <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="project-card">
+<img alt="Project 4" class="project-img" src="img006.webp"/>
+<div class="project-info">
+<h3>Contemporary Interior Apartment</h3>
+<p><i class="fa-solid fa-location-dot"></i> Clifton, Karachi</p>
+<a class="project-link" href="projects.html">More Projects <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="project-card">
+<img alt="Project 5" class="project-img" src="img007.webp"/>
+<div class="project-info">
+<h3>Spanish Design Bungalow</h3>
+<p><i class="fa-solid fa-location-dot"></i> Multan Cantt</p>
+<a class="project-link" href="projects.html">More Projects <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="project-card">
+<img alt="Project 6" class="project-img" src="img008.webp"/>
+<div class="project-info">
+<h3>Kitchen Interior Design</h3>
+<p><i class="fa-solid fa-location-dot"></i> City, Faisalabad</p>
+<a class="project-link" href="projects.html">More Projects <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container">
+<h2 class="section-title">The Words</h2>
+<p class="section-subtitle">What Our Customers Say About Us</p>
+<div class="reviews-grid">
+<div class="review-card">
+<i class="fa-solid fa-quote-right quote"></i>
+<div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<p class="review-text">"Hadi Architect & Builder completed our house plan beautifully. Their team is professional and delivered computerized drawings on time."</p>
+<p class="review-author">Muhammad Ali</p>
+<p class="review-desig">House Owner, Pattoki</p>
+</div>
+<div class="review-card">
+<i class="fa-solid fa-quote-right quote"></i>
+<div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<p class="review-text">"Outstanding interior design services. They utilized every single inch of space effectively. Highly recommended in Pakistan."</p>
+<p class="review-author">Zainab Bibi</p>
+<p class="review-desig">Bungalow Owner, Lahore</p>
+</div>
+<div class="review-card">
+<i class="fa-solid fa-quote-right quote"></i>
+<div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+<p class="review-text">"Best construction management experience. They gave quick response on-site within 3 days exactly as promised."</p>
+<p class="review-author">Ch Tariq Ali</p>
+<p class="review-desig">Plaza Developer, Kasur</p>
+</div>
+</div>
+</div>
+</section>
+<footer>
+<div class="container footer-grid">
+<div class="footer-col">
+<h3>About Us</h3>
+<p>Hadi Architect & Builder was established in Pattoki Punjab, Pakistan in 2022. The company grew organically and gained extensive experience in Pakistan. Currently giving services all over Pakistan, Hadi Architect & Builder has accumulated an impressive portfolio of projects that spans the breadth of building genres – from residential, commercial, leisure, retail, and interior design. The years of experience and absolute commitment to quality enhance the reputation as a premier contractor.</p>
+<div class="social-links">
+<a href="https://www.facebook.com/share/1E7j66DhuL/?mibextid=wwXIfr" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/hadiarchitectbuilder?igsh=MWV2bGgxbDY5eG54bA%3D%3D&utm_source=qr" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+<a href="https://www.tiktok.com/@hadiarchitect?_r=1&_t=ZS-97ihlOkxtzT" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+<!-- YouTube Link -->
+<a href="https://youtube.com/@hadiarchitectbuilder?si=hK8ZOPQwbC0pfuRj" target="_blank">
+  <i class="fa-brands fa-youtube"></i>
+</a>
+
+<!-- LinkedIn Link (Yahan apna profile URL daal dein) -->
+<a href="https://www.linkedin.com/in/rana-umair-ashraf-65171141b?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">
+  <i class="fa-brands fa-linkedin"></i>
+</a>
+</div>
+</div>
+<div class="footer-col">
+<h3>Company</h3>
+<div class="footer-links">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="design-elevation.html">Design &amp; Elevation</a>
+<a href="services.html">Services</a>
+<a href="packages.html">Packages</a>
+<a href="blogs.html">Blogs</a>
+<a href="contact.html">Contact</a>
+<a href="privacy-policy.html">Privacy Policy</a>
+</div>
+</div>
+<div class="footer-col">
+<h3>Content Us</h3>
+<ul class="content-info-list">
+<li><i class="fa-solid fa-location-dot"></i> Pattoki, District Kasur</li>
+<li><i class="fa-solid fa-phone"></i> +923245301575</li>
+<li><i class="fa-solid fa-envelope"></i> hadiarchitectbuilder@gmail.com</li>
+</ul>
+</div>
+</div>
+<div class="container copyright-bar">
+<p>© 2026 Hadi Architect & Builder | Pakistan's No.1 Architectural &amp; Construction Website. All rights reserved.</p>
+</div>
+</footer>
+<a class="floating-wa" href="https://wa.me/923245301575" target="_blank" title="Chat on WhatsApp">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+<script>
+        // --- MOBILE MENU SCRIPT ---
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNavbar.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (mobileNavbar.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNavbar.remove('active');
+                menuToggle.querySelector('i').classList.remove('fa-xmark');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+            });
+        });
+
+
+        // --- TAB SYSTEM SCRIPT ---
+        function switchTab(event, type) {
+            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.form-container').forEach(form => form.classList.remove('active'));
+
+            if (type === 'architect') {
+                event.target.classList.add('active');
+                document.getElementById('architectForm').classList.add('active');
+            } else {
+                event.target.classList.add('active');
+                document.getElementById('interiorForm').classList.add('active');
+            }
+        }
+
+        // --- WHATSAPP FORM SCRIPT ---
+        function sendToWhatsApp(event, type) {
+            event.preventDefault();
+            const whatsappNumber = "923245301575";
+            let message = `*New Lead from Hadi Architect & Builder Website*\n*Type:* ${type}\n\n`;
+
+            if (type === 'Architect') {
+                const plotType = document.getElementById('arc-plot-type').value;
+                const length = document.getElementById('arc-length').value;
+                const front = document.getElementById('arc-front').value;
+                const location = document.getElementById('arc-location').value;
+                const city = document.getElementById('arc-city').value;
+                const name = document.getElementById('arc-name').value;
+                const phone = document.getElementById('arc-phone').value;
+
+                message += `• *Name:* ${name}\n• *Phone:* ${phone}\n• *Plot Type:* ${plotType}\n• *Dimensions:* ${length} x ${front} sqft\n• *Location:* ${location}\n• *City:* ${city}`;
+            } else {
+                const intType = document.getElementById('int-type').value;
+                const size = document.getElementById('int-size').value;
+                const req = document.getElementById('int-req').value;
+                const location = document.getElementById('int-location').value;
+                const city = document.getElementById('int-city').value;
+                const name = document.getElementById('int-name').value;
+                const phone = document.getElementById('int-phone').value;
+
+                message += `• *Name:* ${name}\n• *Phone:* ${phone}\n• *Interior Type:* ${intType}\n• *Size:* ${size}\n• *Requirements:* ${req}\n• *Location:* ${location}\n• *City:* ${city}`;
+            }
+
+            const urlEncodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${urlEncodedMessage}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
